@@ -17,16 +17,14 @@
     <div id="map_canvas"></div>
     
     <script>
+      let myHeading = document.querySelector('h1');
 function setUserName() {
   let myName = prompt('あなたの名前を入力してください.');
   if(!myName) {
     setUserName();
   } else {
     localStorage.setItem('name', myName);
-      const sect = document.querySelector('section');
-      const para = document.createElement('p');
-      para.textContent ='今日は' + myName+'さん';
-      sect.appendChild(para);
+    myHeading.innerHTML ='今日は' + myName+'さん';
   }
 }
 
@@ -34,10 +32,7 @@ if(!localStorage.getItem('name')) {
   setUserName();
 } else {
   let storedName = localStorage.getItem('name');
-      const sect = document.querySelector('section');
-      const para = document.createElement('p');
-      para.textContent ='今日は' + myName+'さん';
-      sect.appendChild(para);
+    myHeading.innerHTML ='今日は' + myName+'さん';
 }
       
       
