@@ -16,10 +16,12 @@
 
     <div id="map_canvas"></div>
     <script>
+      //35.6321412,139.7974637
+      var bigsite={lat:35.6321412,lng:139.7974637};
     function initMap() {
       var myOptions = {
         zoom: 8,
-        center: {lat: 53.480759, lng: -2.242631},
+        center: bigsite,
         mapTypeId: google.maps.MapTypeId.TERRAIN,
         disableDefaultUI: true,
         // Step 4. Customize displayed controls
@@ -41,7 +43,7 @@
 
       // Step 3. Add info window
 
-      var contentString = '<div id="content"><h2 id="firstHeading" class="firstHeading">Custom info window</h2><p>This is a cool custom info window.</p></div>';
+      var contentString = '<div id="content"><h2 id="firstHeading" class="firstHeading">東京ビッグサイト</h2><p>東京国際展示場とも。日本国内で最大の展示場で、ニッチなジャンルの展示会も開催されている。</p></div>';
 
       var infowindow = new google.maps.InfoWindow({
         content: contentString
