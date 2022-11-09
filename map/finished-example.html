@@ -15,7 +15,34 @@
     <h1>Simple maps example</h1>
 
     <div id="map_canvas"></div>
+    
     <script>
+function setUserName() {
+  let myName = prompt('あなたの名前を入力してください.');
+  if(!myName) {
+    setUserName();
+  } else {
+    localStorage.setItem('name', myName);
+      const sect = document.querySelector('section');
+      const para = document.createElement('p');
+      para.textContent ='今日は' + myName+'さん';
+      sect.appendChild(para);
+  }
+}
+
+if(!localStorage.getItem('name')) {
+  setUserName();
+} else {
+  let storedName = localStorage.getItem('name');
+      const sect = document.querySelector('section');
+      const para = document.createElement('p');
+      para.textContent ='今日は' + myName+'さん';
+      sect.appendChild(para);
+}
+      
+      
+      
+      //機能2
       //35.6321412,139.7974637
       var bigsite={lat:35.6321412,lng:139.7974637};
     function initMap() {
